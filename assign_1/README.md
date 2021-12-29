@@ -1,7 +1,9 @@
 # COT5405_Analysis-of-Algorithms
 
-**Problem 1**: Cycle finding
-As part of this problem, you have to design and implement an algorithm to find a cycle (just one cycle) in an undirected graph.
+**Problem 1**: Weighted approximate common substring. 
 
-**Problem 2**:  Minimum Spanning Tree for "sparse" graphs
-For this problem, we consider undirected graphs that have n nodes and at most n+8 edges. For these graphs, you have to design an efficient algorithm that finds the minimum spanning tree.
+Given two input strings, not necessarily of the same length, based on alphanumeric characters [A-Z], determine the best common substring. A substring is a contiguous sequence of characters within a string, and the score that determines the best substring is defined as the sum of the weights  for each character in the sequence (i.e. $w_A$ is the weight of matching letter A) and a penalty  for each mismatch (negative penalty term to drive down the score).   In your experiments, consider situations in which  and  and in which  is proportional to the frequency of the letter in English and  takes values between the smallest and the largest weight (multiple experiments for 10 intermediate values). Note: you are now allowed to add gaps in the solution, i.e. both matched substring have the same length. Example: inputs "ABCAABCAA" and "ABBCAACCBBBBBB". The substring "CAABC" that starts at position 3 in the first string and position 4 in the second,  has a score  since the B is mismatched in the second string.
+
+**Problem 2**: Interval-based constant best approximation. 
+
+Given a set of  points  with integer values for  between  and  and real values for ,  find a partitioning of the interval  into contiguous intervals such that the error of approximating points in each interval element by the average value of  in the interval is minimized. You need to add a penalty factor proportional to the total number of intervals the solution has. For example, if you have  and you partition the X dimension in intervals  the penalty is . Hint: determine separately the formula for the error of approximating a set of values  by their average; think about how you can compute this quantity incrementally to reduce the running time of the algorithm. For this problem, experiment with both an array and a hash (memorization) version of the solution and compare the actual memory usage for both. 
